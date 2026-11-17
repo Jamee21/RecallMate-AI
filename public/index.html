@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="An AI agent that saves and recalls your notes, built with tool calling and persistent memory." />
+  <title>Notes Agent</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <div class="logo" aria-hidden="true">📝</div>
+      <div>
+        <h1>Notes Agent</h1>
+        <p>An AI assistant that saves and recalls your notes</p>
+      </div>
+    </header>
+
+    <section id="chat" class="chat" aria-live="polite" aria-label="Conversation"></section>
+
+    <div id="suggestions" class="suggestions">
+      <button type="button" class="chip" data-text="Kal 5 baje meeting hai, note kar lo">Save a note</button>
+      <button type="button" class="chip" data-text="Meri saari notes dikhao">Show my notes</button>
+      <button type="button" class="chip" data-text="Abhi kitne baje hain?">What time is it?</button>
+    </div>
+
+    <form id="form" class="composer" autocomplete="off">
+      <label for="input" class="sr-only">Message</label>
+      <input id="input" type="text" maxlength="500" placeholder="Type a message…" required />
+      <button id="send" type="submit">Send</button>
+    </form>
+
+    <footer class="footer">
+      Built with Node.js, Express, SQLite and Gemini. It can save notes, but it can’t set alarms or reminders.
+    </footer>
+  </main>
+
+  <script src="/app.js" defer></script>
+</body>
+</html>

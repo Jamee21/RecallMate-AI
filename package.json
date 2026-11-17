@@ -1,18 +1,19 @@
 {
-  "name": "agentic-ai-course",
+  "name": "notes-agent",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "description": "An AI agent with tool calling and persistent memory, built with Node.js, Express, SQLite and Gemini.",
   "type": "module",
+  "main": "src/server.mjs",
+  "scripts": {
+    "start": "node src/server.mjs",
+    "dev": "node --watch src/server.mjs"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "license": "MIT",
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.32.2",
     "dotenv": "^18.0.10",
-    "zod": "^3.25.76"
+    "express": "^5.3.0"
   }
 }
